@@ -17,14 +17,14 @@ class Endereco:
         if numero < 0:
             raise ValueError("Digite apenas números positivos para o número da casa.")
         return numero
-
+    
     
     def _verificar_tipo_cep(self, cep):
-        if not isinstance(cep, int):
-            raise TypeError("Digite apenas números para o CEP.")
-        if cep < 0:
-            raise ValueError("Digite apenas números positivos para o CEP.")
+        if not isinstance(cep, str):
+            raise TypeError("CEP deve ser informado como string.")
+        if len(cep) != 8 or not cep.isdigit():
+            raise ValueError("Digite um CEP válido com 8 dígitos numéricos.")
         return cep
 
     def __str__(self):
-        return f"{self.logradouro}, {self.numero}, {self.complemento}, {self.cep}, {self.cidade}, {self.uf.name}"
+        return f"{self.logradouro}, {self.numero}, {self.complemento}, {self.cep}, {self.cidade}, {self.uf.nome}"
