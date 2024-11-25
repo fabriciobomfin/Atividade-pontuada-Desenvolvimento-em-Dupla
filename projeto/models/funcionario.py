@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from models.endereco import Endereco
+from projeto.models.endereco import Endereco
 
 class Funcionario(ABC):
     def __init__(self, nome: str, telefone: str, email: str, endereco: Endereco) -> None:

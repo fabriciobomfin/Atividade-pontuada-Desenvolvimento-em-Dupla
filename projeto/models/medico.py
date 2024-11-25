@@ -1,5 +1,5 @@
-from models.funcionario import Funcionario
-from models.endereco import Endereco
+from projeto.models.funcionario import Funcionario
+from projeto.models.endereco import Endereco
 
 class Medico(Funcionario):
     def __init__(self, nome: str, telefone: str, email: str, endereco: Endereco, crm: str, salario_base: float = 8000.0, adicional: float = 2000.0) -> None:

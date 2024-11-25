@@ -27,7 +27,7 @@ def valid_endereco():
         uf=MockUnidadeFederativa.SP
     )
 
-class TestEndereco:
+class Test_Endereco:
     def test_endereco_initialization_valid(self, valid_endereco):
         endereco = valid_endereco
         assert endereco.logradouro == "Rua Exemplo"
